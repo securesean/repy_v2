@@ -86,8 +86,8 @@ for line in config_file.readlines():
     print("Done!")
   else:
     print("*** Error checking out repo. Git returned status code" + str( git_process.returncode))
-    print("*** Git messages on stdout: '" + stdout_data + "'.")
-    print("*** Git messages on stderr: '" + stderr_data + "'.")
+    print("*** Git messages on stdout: '" + str(stdout_data) + "'.")
+    print("*** Git messages on stderr: '" + str(stderr_data) + "'.")
     print()
     if not ignore_git_errors:
       print("""Since the skip-mode is off, these errors need to be fixed before the build process can proceed. In 
